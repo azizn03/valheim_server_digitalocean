@@ -1,0 +1,7 @@
+[centosbox]
+111.111.111.111 # ubuntubox
+[ubuntu:vars]
+ansible_user=root
+ansible_ssh_private_key_file=/home/darkeve/git/valheim_server_digitalocean/ansible/inventory/ssh_keys/id_rsa
+#[localhost]
+#127.0.0.1 ansible_connection=local

@@ -1,0 +1,12 @@
+---
+# tasks file for jumphost
+- hosts: all
+  connection: ssh
+  gather_facts: true
+  become: true
+
+  roles:
+  - ../roles/user_setup
+  - ../roles/software_packages
+  - ../roles/server_setup
+...

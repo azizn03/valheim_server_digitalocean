@@ -1,0 +1,15 @@
+---
+- name: Install packages
+  yum:
+    name:
+      - vim
+      - zip
+      - unzip
+      - tar
+      - gzip
+      - glibc.i686
+      - libstdc++.i686
+      - wget
+      - firewalld
+    state: latest
+...

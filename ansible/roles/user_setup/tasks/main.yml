@@ -1,0 +1,39 @@
+---
+# Task file for user_setup
+- name: Darkeve user Creation Task
+  user:
+    name: darkeve
+    uid: 1001
+    generate_ssh_key: yes
+    groups:
+    - wheel
+    state: present
+    shell: /bin/bash
+- name: Allow 'wheel' group to have passwordless sudo
+  lineinfile:
+    dest: /etc/sudoers
+    state: present
+    regexp: '^%wheel'
+    line: '%wheel ALL=(ALL) NOPASSWD: ALL'
+    validate: 'visudo -cf %s'
+- name: tranfer SSH keys to darkeve account.
+  copy:
+    src: ../../../inventory/ssh_keys/id_rsa
+    dest: /home/darkeve/.ssh/id_rsa
+    owner: darkeve
+    group: darkeve
+    mode: 0600
+- name: tranfer SSH keys to darkeve account.
+  copy:
+    src: ../../../inventory/ssh_keys/id_rsa.pub
+    dest: /home/darkeve/.ssh/id_rsa.pub
+    owner: darkeve
+    group: darkeve
+    mode: 0644
+- name: Steam user Creation Task
+  user:
+    name: steam
+    uid: 1002
+    state: present
+    shell: /bin/bash
+

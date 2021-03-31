@@ -1,0 +1,17 @@
+---
+- name: Get running process of Server
+  shell: "ps aux | grep server | cut -c 12-17 | head -n 1"
+  register: server_process
+- name: Kill running processes
+  shell: "kill -15 {{ item }}"
+  with_items: "{{ server_process.stdout_lines }}"
+- name: Zip world folder.
+  archive:
+    path: /home/steam/.config/unity3d/IronGate/Valheim/worlds
+    dest: /home/steam/.config/unity3d/IronGate/Valheim/worlds.zip
+    format: zip
+- name: fetch world folder.
+  fetch:
+    src: /home/steam/.config/unity3d/IronGate/Valheim/worlds.zip
+    dest: ../../../worldbackup/worlds.zip
+    flat: yes

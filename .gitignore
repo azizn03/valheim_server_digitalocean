@@ -1,0 +1,7 @@
+#terraform files
+*.tfstate
+*tfstate.backup
+providers.tf
+/ansible/inventory/ssh_keys/*
+.terraform/*
+
