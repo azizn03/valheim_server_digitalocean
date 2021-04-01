@@ -8,18 +8,22 @@
     owner: steam
   become_user: steam
 - name: Download steamcmd
-  shell: cd /home/steam && sudo wget http://media.steampowered.com/installer/steamcmd_linux.tar.gz
+  get_url:
+    url: "http://media.steampowered.com/installer/steamcmd_linux.tar.gz"
+    dest: /home/steam/steamcmd_linux.tar.gz
 - name: Give steam permissions to steamcmd folder
   file:
     path: /home/steam/steamcmd
     owner: steam
     recurse: yes
     state: directory
-- name: extract steamcmd
-  shell: cd /home/steam && tar -xvzf steamcmd_linux.tar.gz
-  args:
-    executable: /bin/bash
-  become_user: steam
+- name: Extract steamcmd
+  unarchive:
+    src: /home/steam/steamcmd_linux.tar.gz
+    dest: /home/steam/
+    owner: steam
+    group: steam
+    remote_src: yes
 - name: Install Valheim
   shell: cd /home/steam && ./steamcmd.sh +login anonymous +force_install_dir /home/steam/steamcmd +app_update 896660 validate +exit    
   args:
@@ -30,6 +34,7 @@
     src: ../files/start_server.sh
     dest: /home/steam/steamcmd/start_server.sh
     owner: steam
+    group: steam
 - name: Filewall enable port 22 tcp
   firewalld:
     port: 22/tcp
