@@ -59,23 +59,4 @@
 - name: Run Valheim server.
   shell: cd /home/steam/steamcmd && ./start_server.sh
   become_user: steam
-- name: Get running process of Server
-  shell: "ps aux | grep server | cut -c 12-17 | head -n 1"
-  register: server_process
-- name: Wait 15 seconds
-  pause:
-    prompt: Waiting 15 seconds for server to start.
-    seconds: 15
-- name: Kill running processes
-  shell: "kill -15 {{ item }}"
-  with_items: "{{ server_process.stdout_lines }}"
-- name: Extract world folder
-  unarchive:
-    src: ../../../worldbackup/worlds.zip
-    dest: /home/steam/.config/unity3d/IronGate/Valheim
-    owner: steam
-    group: steam
-- name: Run Valheim server.
-  shell: cd /home/steam/steamcmd && ./start_server.sh
-  become_user: steam
 ...
