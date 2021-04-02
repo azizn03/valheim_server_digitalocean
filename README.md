@@ -1,9 +1,7 @@
 # valheim_server_digitalocean
 Automated server setup for Valheim
 
-Using the power of DevOps tools I have created a script which providing you
-have access to a unix shell with docker installed it runs a set of commands using terraform and ansible to not only bring up a server, but it will configure the server and output an IP and you can simply
-connect to your Valhiem server from there.
+Using the power of DevOps tools I have created a script which providing you have access to a unix shell with docker installed it runs a set of commands using terraform and ansible to not only bring up a server, but it will configure the server and output an IP and you can simply connect to your Valhiem server from there.
 
 The first thing that might come into mind is the cost. Well as most cloud
 service providers, they run off a pay for what you use model. The idea behind
@@ -13,7 +11,7 @@ paying for the server when you are not using it. You can then simply run the
 start and the restore script from there and carry on where you left off. For
 reference with the current server size which handles three players just fine,
 I am hosting the server for roughly 6-8 hours a day and it is costing me $3-$6
-dollars a week. I will explain how to change the server size and region the
+dollars a week. I will later add how to change the server size and region the
 server is hosted in. 
 
 ## Prerequisites:
