@@ -101,22 +101,18 @@ for you. As a reminder when you run the stop_server.sh script this will backup a
 So with all the pre requirement steps completed, everytime you want to play you
 simply do the following. 
 
-#### Starting the server
+#### Starting and stopping the server
 
 1. Navigate to root folder of the project.
 2. Run this command "docker run --env-file ./env-file --name valhiem_server -v $pwd:/terraform -it game_server bash"
-3. Now you are inside the container. Run the start_server.sh script.
+3. Now you are inside the container. Run the start_server.sh script. (Ensure you stay inside the container as long as the server is running so you can stop it when finished playing.)
 4. You will be given an IP address. Simply connect to your server with that IP and the port 2456 and your good to go. 
+5. To stop the server when you are finished just run stop_server.sh
 
 #### Restore map files.
 
 1. Repeat steps 1 and 2 from starting the server if not done already.
 2. Run restore_world script.
-
-#### Stop server.
-
-1. Repeat steps 1 and 2 from starting the server if not done already.
-2. run stop_server.sh command inside the container. 
 
 #### Backing up your map files
 
