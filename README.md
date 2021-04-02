@@ -104,11 +104,11 @@ simply do the following.
 #### Starting and stopping the server
 
 1. Navigate to root folder of the project.
-2. Run this command "docker run --env-file ./env-file --name valhiem_server -v $pwd:/terraform -it game_server bash"
+2. Run this command ```docker run --env-file ./env-file --name valhiem_server -v $pwd:/terraform -it game_server bash```
 3. Now you are inside the container. Run the start_server.sh script. (Ensure you stay inside the container as long as the server is running so you can stop it when finished playing.)
 4. You will be given an IP address. Simply connect to your server with that IP and the port 2456 and your good to go. 
 5. To stop the server when you are finished just run stop_server.sh
-6. After the server is destoryed simply type exit to exit the container. 
+6. After the server is destoryed simply type ```exit``` to exit the container. 
 
 #### Restore map files.
 
@@ -120,5 +120,5 @@ simply do the following.
 1. First stop the server with stop_server.sh inside the container.
 2. Open a new terminal as you will be running the following command outside the container whilst it is still running
 3. Navigate to ansible/worldbackup 
-4. run the commmand docker cp valhiem_server:/terraform/ansible/worldbackup/worlds.zip .
-5. You can now exit the container by typing exit
+4. run the commmand ```docker cp valhiem_server:/terraform/ansible/worldbackup/worlds.zip .```
+5. You can now exit the container by typing ```exit```
