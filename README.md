@@ -124,7 +124,7 @@ game_server bash"
 
 #### Stop server.
 
-1. 1. Repeat steps 1 and 2 from starting the server if not done already.
+1. Repeat steps 1 and 2 from starting the server if not done already.
 2. run stop_server.sh command inside the container. 
 
 #### Backing up your map files
