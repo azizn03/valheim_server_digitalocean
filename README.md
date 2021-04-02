@@ -121,7 +121,7 @@ simply do the following.
 #### Backing up your map files
 
 1. First stop the server with stop_server.sh inside the container.
-2. Open a new terminal 
+2. Open a new terminal as you will be running the following command outside the container whilst it is still running
 3. Navigate to ansible/worldbackup 
 4. run the commmand docker cp
    valhiem_server:/terraform/ansible/worldbackup/worlds.zip .
