@@ -19,7 +19,8 @@ server is hosted in.
 ## Prerequisites:
 
 Very basic knowlege of Linux. i.e. knowing how to navigate through directories
-and manipulate text files through the terminal
+and manipulate text files through the terminal.
+
 Access to a Unix based terminal with Docker installed. (Look into creating a virtual machine via VirtualBox)
 
 ### Digital Ocean provider key.
