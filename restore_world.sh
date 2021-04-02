@@ -1,1 +1,1 @@
-cd /terraform/ansible && ansible-playbook playbooks/restore_world.yml
+cd /terraform/ansible && ansible-playbook playbooks/restore.yml
