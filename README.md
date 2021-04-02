@@ -78,16 +78,10 @@ the start_server.sh file. Here you can give your server and the world a name
 and choose the password. It is pretty self explanatory what needs changing.
 I have added some place holders.
 
-Now we can build and run our docker container and run the scripts we need.
-Simply run the following commands whilst in the root folder of the project.
+Now we can build our docker container and run the scripts we need.
+Simply run the following command whilst in the root folder of the project.
 
 ```docker build . -t game_server```
-
-```docker run --env-file ./env-file --name valhiem_server -v $pwd:/terraform -it game_server bash```
-
-We are now inside our container. Simply run the .start_server.sh script then
-after that is completed  It will give a server IP and you can connect to your
-game server from there. 
 
 ### using an existing map 
 
@@ -101,11 +95,8 @@ worlds.zip
      * .db files 
 
 Simply place that in the ansible/worldbackup directory before running the
-container and after the start_server.sh script has
-finished simply run the restore_world.sh script and this will import the files
-for you. As a reminder when you run the stop_server.sh script this will backup
-any current world files on that server before shutting it down and place it in the same directory.
-
+container and after the start_server.sh script has finished simply run the restore_world.sh script and this will import the files
+for you. As a reminder when you run the stop_server.sh script this will backup any current world files on that server before shutting it down and place it in the same directory.
 
 So with all the pre requirement steps completed, everytime you want to play you
 simply do the following. 
@@ -113,8 +104,7 @@ simply do the following.
 #### Starting the server
 
 1. Navigate to root folder of the project.
-2. Run this command "docker run --env-file ./env-file --name valhiem_server -v $pwd:/terraform -it
-game_server bash"
+2. Run this command "docker run --env-file ./env-file --name valhiem_server -v $pwd:/terraform -it game_server bash"
 3. Now you are inside the container. Run the start_server.sh script.
 
 #### Restore map files.
