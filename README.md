@@ -110,7 +110,7 @@ any current world files on that server before shutting it down and place it in t
 So with all the pre requirement steps completed, everytime you want to play you
 simply do the following. 
 
-Starting the server after doing all the Prerequisites
+#### Starting the server
 
 1. Navigate to root folder of the project.
 2. Run this command "docker run --env-file ./env-file --name valhiem_server -v $pwd:/terraform -it
