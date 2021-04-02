@@ -58,7 +58,7 @@ TF_VAR_do_token=value
 TF_VAR_ssh_fingerprint=value
 ```
 
-### Add your IP address to the SHH firewall rule.
+### Add your IP address to the SSH firewall rule.
 
 For the script to connect and configure the server we need to make sure we give
 our IP address from the machine we are running the script from added the
