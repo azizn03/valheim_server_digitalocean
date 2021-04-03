@@ -67,6 +67,18 @@ variable "home_ip" {
   default = "111.111.111.111/32"
 }
 ```
+### Using an existing map 
+
+If you want to use an existing world then simply ensure your world folder is in
+a zip folder named worlds.zip including the worlds folder itself not just the files so it looks
+something like this
+
+worlds.zip
+  * worlds
+     * .fwl files
+     * .db files 
+
+Simply place that in the ansible/worldbackup directory before running the container and after the start_server.sh script has finished simply run the restore_world.sh script and this will import the files for you. 
 
 ### Edit your game server script file
 
@@ -79,21 +91,6 @@ Now we can build our docker container and run the scripts we need.
 Simply run the following command whilst in the root folder of the project.
 
 ```docker build . -t game_server```
-
-### using an existing map 
-
-If you want to use an existing world then simply ensure your world folder is in
-a zip folder named worlds.zip including the worlds folder itself not just the files so it looks
-something like this
-
-worlds.zip
-  * worlds
-     * .fwl files
-     * .db files 
-
-Simply place that in the ansible/worldbackup directory before running the
-container and after the start_server.sh script has finished simply run the restore_world.sh script and this will import the files
-for you. As a reminder when you run the stop_server.sh script this will backup any current world files on that server before shutting it down and place it in the same directory.
 
 So with all the pre requirement steps completed, everytime you want to play you
 simply do the following. 
