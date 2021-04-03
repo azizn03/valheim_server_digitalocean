@@ -115,5 +115,7 @@ simply do the following.
 
 #### Restore map files.
 
-1. First make sure the server is running
-2. Run restore_world script. This will automatically pause the game server, restore the files then start the game server again with the new map. 
+1. Place your worlds.zip folder structured as mentioned previous in the ansible/worldsbackup folder.
+2. Use the docker build and run commands as previously mentioned
+3. Ensure the server is running using the start_server.sh script. 
+4. Run restore_world script. This will automatically pause the game server, restore the files then start the game server again with the new map. 
