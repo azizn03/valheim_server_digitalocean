@@ -107,7 +107,8 @@ simply do the following.
 3. Now you are inside the container. Run the start_server.sh script. (Ensure you stay inside the container as long as the server is running so you can stop it when finished playing.)
 4. You will be given an IP address. Simply connect to your server with that IP and the port 2456 and your good to go. 
 5. To stop the server when you are finished just run stop_server.sh
-6. After the server is destoryed simply type ```exit``` to exit the container. 
+6. Make sure you backup your map files as shown below before exiting the container or you will lose your map files. 
+7. Simply type ```exit``` to exit the container. 
 
 #### Restore map files.
 
