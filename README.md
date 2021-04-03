@@ -98,12 +98,13 @@ simply do the following.
 #### Starting and stopping the server
 
 1. Navigate to root folder of the project.
-2. Run this command ```docker run --env-file ./env-file --name valhiem_server -v $pwd:/terraform -it game_server bash```
-3. Now you are inside the container. Run the start_server.sh script. (Ensure you stay inside the container as long as the server is running so you can stop it when finished playing.)
-4. You will be given an IP address. Simply connect to your server with that IP and the port 2456 and your good to go. 
-5. To stop the server when you are finished just run stop_server.sh
-6. Make sure you backup your map files as shown below before exiting the container or you will lose your map files. 
-7. Simply type ```exit``` to exit the container. 
+2. If you want play using your previously backed up map files, first put the worlds.zip folder in the ansible/worldsbackup folder then rebuild the container and follow the restore map files instructions
+3. Run this command ```docker run --env-file ./env-file --name valhiem_server -v $pwd:/terraform -it game_server bash```
+4. Now you are inside the container. Run the start_server.sh script. (Ensure you stay inside the container as long as the server is running so you can stop it when finished playing.)
+5. You will be given an IP address. Simply connect to your server with that IP and the port 2456 and your good to go. 
+6. To stop the server when you are finished just run stop_server.sh
+7. Make sure you backup your map files as shown below before exiting the container or you will lose your map files. 
+8. Simply type ```exit``` to exit the container. 
 
 #### Backing up your map files
 
@@ -115,7 +116,7 @@ simply do the following.
 
 #### Restore map files.
 
-1. Place your worlds.zip folder structured as mentioned previous in the ansible/worldsbackup folder.
+1. Place your worlds.zip folder structured as mentioned previously in the ansible/worldsbackup folder.
 2. Use the docker build and run commands as previously mentioned
 3. Ensure the server is running using the start_server.sh script. 
 4. Run restore_world script. This will automatically pause the game server, restore the files then start the game server again with the new map. 
