@@ -110,11 +110,6 @@ simply do the following.
 6. Make sure you backup your map files as shown below before exiting the container or you will lose your map files. 
 7. Simply type ```exit``` to exit the container. 
 
-#### Restore map files.
-
-1. First make sure the server is running
-2. Run restore_world script. This will automatically pause the game server, restore the files then start the game server again with the new map. 
-
 #### Backing up your map files
 
 1. First stop the server with stop_server.sh inside the container.
@@ -122,3 +117,8 @@ simply do the following.
 3. Navigate to ansible/worldbackup 
 4. run the commmand ```docker cp valhiem_server:/terraform/ansible/worldbackup/worlds.zip .```
 5. You can now exit the container by typing ```exit```
+
+#### Restore map files.
+
+1. First make sure the server is running
+2. Run restore_world script. This will automatically pause the game server, restore the files then start the game server again with the new map. 
