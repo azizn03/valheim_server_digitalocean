@@ -17,7 +17,7 @@ server is hosted in.
 Very basic knowlege of Linux. i.e. knowing how to navigate through directories
 and manipulate text files through the terminal.
 
-Access to a Unix based terminal with Docker installed. (Look into creating a virtual machine via VirtualBox)
+Access to a Unix based terminal with Docker installed. (Look into creating a virtual machine via VirtualBox) or use wsl2 if you are using windows 10.
 
 ### Digital Ocean provider key.
 
