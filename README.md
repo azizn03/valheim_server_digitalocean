@@ -98,7 +98,7 @@ simply do the following.
 #### Starting and stopping the server
 
 1. Navigate to root folder of the project.
-2. If you want play using your previously backed up map files, first put the worlds.zip folder in the ansible/worldsbackup folder then rebuild the container and follow the restore map files instructions
+2. If you want to play using your previously backed up map files, first put the worlds.zip folder in the ansible/worldsbackup folder then rebuild the container and follow the restore map files instructions
 3. Run this command ```docker run --env-file ./env-file --name valhiem_server -v $pwd:/terraform -it game_server bash```
 4. Now you are inside the container. Run the start_server.sh script. (Ensure you stay inside the container as long as the server is running so you can stop it when finished playing.)
 5. You will be given an IP address. Simply connect to your server with that IP and the port 2456 and your good to go. 
