@@ -21,7 +21,7 @@ Access to a Unix based terminal with Docker installed. (Look into creating a vir
 
 ### Digital Ocean provider key.
 
-Create an account on digital ocean, feel free to use my refferal code: https://m.do.co/c/ab9254216e3f
+Create an account on digital ocean, feel free to use my refferal code for $100 credit to use over 60 days: https://m.do.co/c/ab9254216e3f
 After you created your account and have logged in, on the left tab at the
 bottom you will see a link called "API" click on that then Generate a new token.
 Call it whatever you want. Ensure you tick the Write(optional) box or this
