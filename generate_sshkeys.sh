@@ -3,6 +3,8 @@
 sshprivate="./ansible/inventory/ssh_keys/id_rsa"
 sshpublic="./ansible/inventory/ssh_keys/id_rsa.pub"
 
+mkdir ./ansible/inventory/ssh_keys
+
 if [ -f $sshprivate -a -f $sshpublic ]; then
     echo "SSH keys already generated"
 else
