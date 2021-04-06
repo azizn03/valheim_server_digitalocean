@@ -82,7 +82,7 @@ Simply place that in the ansible/worldbackup directory before running the contai
 
 ### Edit your game server script file
 
-go to /terraform/project/ansible/roles/server_setup/files and you should see
+go to ansible/roles/server_setup/files and you should see
 the start_server.sh file. Here you can give your server and the world a name
 and choose the password. It is pretty self explanatory what needs changing.
 I have added some place holders.
